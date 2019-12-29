@@ -137,9 +137,9 @@ SHRP_OTG := /usb_otg
 # Put 0 to disable flashlight
 SHRP_FLASH := 1
 # These are led paths, find yours then put here
-SHRP_FONP_1 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
-SHRP_FONP_2 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
-SHRP_FONP_3 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
+SHRP_FONP_1 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$3/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$3/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$3/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:switch_0/brightness
 # Max Brightness of LED
 SHRP_FLASH_MAX_BRIGHTNESS := 200
  Check your device's recovery path, dont use blindly
