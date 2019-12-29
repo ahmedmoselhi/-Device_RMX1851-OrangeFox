@@ -131,7 +131,7 @@ SHRP_MAINTAINER :=  kanged99
 SHRP_DEVICE_CODE := RMX1851
 # put this 0 if device has no EDL mode
 SHRP_EDL_MODE := 1
-SHRP_EXTERNAL := /external_sd
+SHRP_EXTERNAL := /sdcard1
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
 # Put 0 to disable flashlight
@@ -144,5 +144,3 @@ SHRP_FONP_3 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
 SHRP_FLASH_MAX_BRIGHTNESS := 200
  Check your device's recovery path, dont use blindly
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
-# Use this flag only if your device is A/B
-SHRP_AB := false
