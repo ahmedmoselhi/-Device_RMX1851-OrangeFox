@@ -124,7 +124,7 @@ TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
 # Hack: prevent anti rollback
 PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
-SHRP flags
+#SHRP flags
 # Maintainer name
 SHRP_MAINTAINER :=  kanged99
 # Device codename
