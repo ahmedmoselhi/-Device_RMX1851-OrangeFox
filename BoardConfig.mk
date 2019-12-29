@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/realme/RMX1851
-
+SHRP_PATH := device/realme/RMX1851
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -46,15 +45,15 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno616
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 swiotlb=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_KERNEL_TAGS_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
-#BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-#BOARD_INCLUDE_RECOVERY_DTBO := true
-#BOARD_BOOTIMG_HEADER_VERSION := 1
+TARGET_PREBUILT_KERNEL := $(SHRP_PATH)/prebuilt/Image.gz-dtb
+BOARD_PREBUILT_DTBOIMAGE := $(SHRP_PATH)/prebuilt/dtbo.img
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_BOOTIMG_HEADER_VERSION := 1
 #BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 #BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 #BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -120,7 +119,8 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
 TW_EXCLUDE_TWRPAPP := true
+TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
 
 # Hack: prevent anti rollback
+PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
-
