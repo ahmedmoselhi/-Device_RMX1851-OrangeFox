@@ -124,3 +124,25 @@ TW_OZIP_DECRYPT_KEY := "1c4c1ea3a12531ae491b21bb31613c11"
 # Hack: prevent anti rollback
 PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
+SHRP flags
+# Maintainer name
+SHRP_MAINTAINER :=  kanged99
+# Device codename
+SHRP_DEVICE_CODE := RMX1851
+# put this 0 if device has no EDL mode
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+# Put 0 to disable flashlight
+SHRP_FLASH := 1
+# These are led paths, find yours then put here
+SHRP_FONP_1 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
+SHRP_FONP_2 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
+SHRP_FONP_3 := /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440$
+# Max Brightness of LED
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+ Check your device's recovery path, dont use blindly
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# Use this flag only if your device is A/B
+SHRP_AB := false
