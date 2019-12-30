@@ -21,9 +21,9 @@ Works:
 First checkout minimal twrp with omnirom tree:
 
 ```
-$ repo init -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
+$ repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
 
-repo sync
+repo sync  -f --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 ```
 
 Then add these projects to .repo/manifest.xml:
