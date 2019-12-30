@@ -129,4 +129,4 @@ PB_OFFICIAL := false
 PB_DISABLE_FORCED_ENCRYPTION = true
 PB_TREBLE_COMP = true
 PB_DISABLE_DEFAULT_DM_VERITY = true
-PB_TORCH_PATH = /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0
+#PB_TORCH_PATH = /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds/led:torch_0
