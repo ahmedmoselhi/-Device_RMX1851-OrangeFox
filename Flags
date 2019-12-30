@@ -15,4 +15,4 @@ PB_SURVIVAL_BACKUP_NAME   PB_SURVIVAL_BACKUP
 PB_INSTALL_PREBUILT_ZIP = 0 or 1
 PB_DISABLE_SECURE_BOOT = 0 or 1
 PB_ADVANCED_STOCK_REPLACE = 0 
-PB_TORCH_PATH = " "
+PB_TORCH_PATH = "/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm660l@3:qcom,leds@d300/leds"
