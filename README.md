@@ -21,15 +21,14 @@ Works:
 First checkout minimal twrp with omnirom tree:
 
 ```
-$ repo init --depth=1 -u git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
-
+repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 repo sync  -f --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 ```
 
 Then add these projects to .repo/manifest.xml:
 
 ```xml
-<project path="device/realme/RMX1851" name="PitchBlackRecoveryProject/Device_RMX1851-PBRP" remote="github" revision="android-9.0" />
+<project path="device/realme/RMX1851" name="ahmedmoselhi/Device_RMX1851-OrangeFox" remote="github" revision="android-9.0" />
 ```
 
 Finally execute these:
